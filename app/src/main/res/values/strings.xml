@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Political Preparedness</string>
+
+    <!-- TODO: Add necessary string values -->
+    <string name="logo_image_content_description">Voting image</string>
+    <string name="upcoming_elections">Upcoming Elections</string>
+    <string name="saved_elections">Saved Elections</string>
+    <string name="find_my_representatives">Find my representatives</string>
+
+    <string name="profile_picture">Profile picture</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
+    <string name="web">Web</string>
+
+
+
+</resources>

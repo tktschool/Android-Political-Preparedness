@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_election.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/fragment_election.xml"
+    },
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_election.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/list_item_election.xml"
+    },
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_launch.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/fragment_launch.xml"
+    },
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_representative.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/fragment_representative.xml"
+    },
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_item_representtative.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/list_item_representtative.xml"
+    },
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_voter_info.xml",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/fragment_voter_info.xml"
+    }
+]
