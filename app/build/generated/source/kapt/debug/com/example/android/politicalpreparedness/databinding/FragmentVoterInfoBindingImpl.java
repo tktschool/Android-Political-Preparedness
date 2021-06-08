@@ -18,6 +18,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
         sViewsWithIds.put(R.id.address_group, 6);
         sViewsWithIds.put(R.id.state_correspondence_header, 7);
         sViewsWithIds.put(R.id.address, 8);
+        sViewsWithIds.put(R.id.follow_button, 9);
     }
     // views
     @NonNull
@@ -32,7 +33,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     // Inverse Binding Event Handlers
 
     public FragmentVoterInfoBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private FragmentVoterInfoBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -40,6 +41,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
             , (androidx.constraintlayout.widget.Group) bindings[6]
             , (android.widget.TextView) bindings[2]
             , (androidx.appcompat.widget.Toolbar) bindings[1]
+            , (android.widget.Button) bindings[9]
             , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[5]
@@ -234,7 +236,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
                 if (voterInfoViewModelJavaLangObjectNull) {
 
 
-                    voterInfoViewModel.onClickBallotInformationClicked();
+                    voterInfoViewModel.onBallotInformationClicked();
                 }
                 break;
             }
@@ -251,7 +253,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
                 if (voterInfoViewModelJavaLangObjectNull) {
 
 
-                    voterInfoViewModel.onClickVotingLocationsClicked();
+                    voterInfoViewModel.onVotingLocationsClicked();
                 }
                 break;
             }

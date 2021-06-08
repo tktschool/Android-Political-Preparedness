@@ -34,6 +34,11 @@ class ElectionRepository(private val database: ElectionDatabase) {
         }
     }
 
+    suspend fun hasElection(election: Election): Boolean {
+        return withContext(Dispatchers.IO) {
+            election == database.electionDao.getElectionById(election.id)
+        }
+    }
 
     suspend fun refreshUpcomingElections() {
         withContext(Dispatchers.IO) {

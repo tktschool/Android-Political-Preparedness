@@ -10,12 +10,16 @@ import com.example.android.politicalpreparedness.utils.SingleLiveEvent
 import kotlinx.coroutines.launch
 import java.io.IOException
 
-class VoterInfoViewModel(private val repository: ElectionRepository, private val followString: String, private val unfollowString: String, private val election: Election,
-                         app: Application
+class VoterInfoViewModel(
+    private val repository: ElectionRepository,
+    private val followString: String,
+    private val unfollowString: String,
+    private val election: Election,
+    app: Application
 ) : BaseViewModel(app) {
 
-    //TODO: Add live data to hold voter info
-
+    //Add live data to hold voter info
+    //Add var and methods to populate voter info
     val voterInfo = repository.voterInfo
 
     private val _voterInfoFetched = MutableLiveData<Boolean>(false)
@@ -34,19 +38,24 @@ class VoterInfoViewModel(private val repository: ElectionRepository, private val
     val showBallotInformation: LiveData<Boolean>
         get() = _showBallotInformation
 
-
-    //TODO: Add var and methods to populate voter info
-
-    //TODO: Add var and methods to support loading URLs
-    fun onClickVotingLocationsClicked() {
+    //Add var and methods to support loading URLs
+    fun onVotingLocationsClicked() {
         _showVotingLocations.value = true
     }
 
-    fun onClickBallotInformationClicked() {
+    fun onBallotInformationClicked() {
         _showBallotInformation.value = true
     }
 
     //TODO: Add var and methods to save and remove elections to local database
+    suspend fun onFollowButtonClicked() {
+        if (repository.hasElection(election)) {
+            repository.unfollowElection(election)
+        } else {
+            repository.followElection(election)
+        }
+    }
+
     //TODO: cont'd -- Populate initial state of save button to reflect proper action based on election saved status
 
     /**

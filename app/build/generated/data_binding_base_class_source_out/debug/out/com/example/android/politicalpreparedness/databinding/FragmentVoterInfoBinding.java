@@ -4,6 +4,7 @@ package com.example.android.politicalpreparedness.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +33,9 @@ public abstract class FragmentVoterInfoBinding extends ViewDataBinding {
   public final Toolbar electionName;
 
   @NonNull
+  public final Button followButton;
+
+  @NonNull
   public final TextView stateBallot;
 
   @NonNull
@@ -51,13 +55,14 @@ public abstract class FragmentVoterInfoBinding extends ViewDataBinding {
 
   protected FragmentVoterInfoBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextView address, Group addressGroup, TextView electionDate, Toolbar electionName,
-      TextView stateBallot, TextView stateCorrespondenceHeader, TextView stateHeader,
-      TextView stateLocations) {
+      Button followButton, TextView stateBallot, TextView stateCorrespondenceHeader,
+      TextView stateHeader, TextView stateLocations) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
     this.addressGroup = addressGroup;
     this.electionDate = electionDate;
     this.electionName = electionName;
+    this.followButton = followButton;
     this.stateBallot = stateBallot;
     this.stateCorrespondenceHeader = stateCorrespondenceHeader;
     this.stateHeader = stateHeader;

@@ -1433,6 +1433,7 @@ id fill_vertical
 id filled
 id fixed
 id flip
+id follow_button
 id forever
 id fragment_container_view_tag
 id ghost_view
