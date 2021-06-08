@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.example.android.politicalpreparedness.R
 import com.example.android.politicalpreparedness.base.BaseFragment
-import com.example.android.politicalpreparedness.base.BaseViewModel
 import com.example.android.politicalpreparedness.database.ElectionDatabase
 import com.example.android.politicalpreparedness.databinding.FragmentVoterInfoBinding
 import com.example.android.politicalpreparedness.repository.ElectionRepository
@@ -33,9 +32,8 @@ class VoterInfoFragment : BaseFragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        //TODO: Add ViewModel values and create ViewModel
-
-        //TODO: Add binding values
+        //Add ViewModel values and create ViewModel
+        //Add binding values
         val binding = FragmentVoterInfoBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
 
@@ -46,10 +44,18 @@ class VoterInfoFragment : BaseFragment() {
         binding.election = election
         binding.voterInfoViewModel = _viewModel
 
-        //TODO: Handle loading of URLs
+        //Handle loading of URLs
         _viewModel.showVotingLocations.observe(viewLifecycleOwner) {
             if (it) {
                 val uri = Uri.parse(_viewModel.hasVotingLocationsInfo.value)
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(intent)
+            }
+        }
+
+        _viewModel.showBallotInformation.observe(viewLifecycleOwner) {
+            if (it) {
+                val uri = Uri.parse(_viewModel.hasBallotInfo.value)
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 startActivity(intent)
             }

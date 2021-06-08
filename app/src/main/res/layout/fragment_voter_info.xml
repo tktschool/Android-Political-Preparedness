@@ -52,26 +52,29 @@
             app:layout_constraintStart_toStartOf="@id/election_date"
             app:layout_constraintTop_toBottomOf="@id/election_date" />
 
-        <!-- TODO: Add click binding to open web URL -->
-        <!-- TODO: Add visual styling and content -->
         <TextView
             android:id="@+id/state_locations"
+            style="@style/item_value_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:onClick="@{() -> voterInfoViewModel.onClickVotingLocationsClicked()}"
             android:text="@string/voting_locations"
             app:layout_constraintStart_toStartOf="@id/election_date"
             app:layout_constraintTop_toBottomOf="@id/state_header"
             app:viewVisibility="@{voterInfoViewModel.hasVotingLocationsInfo}" />
 
-        <!-- TODO: Add click binding to open web URL -->
-        <!-- TODO: Add visual styling and content -->
         <TextView
             android:id="@+id/state_ballot"
+            style="@style/item_value_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> voterInfoViewModel.onClickBallotInformationClicked()}"
+            android:text="@string/ballot_information"
             app:layout_constraintStart_toStartOf="@id/election_date"
-            app:layout_constraintTop_toBottomOf="@id/state_locations" />
+            app:layout_constraintTop_toBottomOf="@id/state_locations"
+            app:viewVisibility="@{voterInfoViewModel.hasBallotInfo}" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/address_group"

@@ -26,9 +26,13 @@ class VoterInfoViewModel(private val repository: ElectionRepository, private val
     val errorOnFetchingNetwork: LiveData<Boolean>
         get() = _errorOnFetchingNetwork
 
-    private val _showVotingLocations = MutableLiveData<Boolean>()
+    private val _showVotingLocations = MutableLiveData<Boolean>(false)
     val showVotingLocations: LiveData<Boolean>
         get() = _showVotingLocations
+
+    private val _showBallotInformation = MutableLiveData<Boolean>(false)
+    val showBallotInformation: LiveData<Boolean>
+        get() = _showBallotInformation
 
 
     //TODO: Add var and methods to populate voter info
@@ -36,6 +40,10 @@ class VoterInfoViewModel(private val repository: ElectionRepository, private val
     //TODO: Add var and methods to support loading URLs
     fun onClickVotingLocationsClicked() {
         _showVotingLocations.value = true
+    }
+
+    fun onClickBallotInformationClicked() {
+        _showBallotInformation.value = true
     }
 
     //TODO: Add var and methods to save and remove elections to local database
