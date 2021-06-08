@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.navigation.NavDirections;
 import com.example.android.politicalpreparedness.R;
-import com.example.android.politicalpreparedness.network.models.Division;
+import com.example.android.politicalpreparedness.network.models.Election;
 import java.io.Serializable;
 import java.lang.IllegalArgumentException;
 import java.lang.Object;
@@ -20,35 +20,27 @@ public class ElectionsFragmentDirections {
 
   @NonNull
   public static ActionElectionsFragmentToVoterInfoFragment actionElectionsFragmentToVoterInfoFragment(
-      int argElectionId, @NonNull Division argDivision) {
-    return new ActionElectionsFragmentToVoterInfoFragment(argElectionId, argDivision);
+      @NonNull Election argElection) {
+    return new ActionElectionsFragmentToVoterInfoFragment(argElection);
   }
 
   public static class ActionElectionsFragmentToVoterInfoFragment implements NavDirections {
     private final HashMap arguments = new HashMap();
 
-    private ActionElectionsFragmentToVoterInfoFragment(int argElectionId,
-        @NonNull Division argDivision) {
-      this.arguments.put("arg_election_id", argElectionId);
-      if (argDivision == null) {
-        throw new IllegalArgumentException("Argument \"arg_division\" is marked as non-null but was passed a null value.");
+    private ActionElectionsFragmentToVoterInfoFragment(@NonNull Election argElection) {
+      if (argElection == null) {
+        throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("arg_division", argDivision);
+      this.arguments.put("arg_election", argElection);
     }
 
     @NonNull
-    public ActionElectionsFragmentToVoterInfoFragment setArgElectionId(int argElectionId) {
-      this.arguments.put("arg_election_id", argElectionId);
-      return this;
-    }
-
-    @NonNull
-    public ActionElectionsFragmentToVoterInfoFragment setArgDivision(
-        @NonNull Division argDivision) {
-      if (argDivision == null) {
-        throw new IllegalArgumentException("Argument \"arg_division\" is marked as non-null but was passed a null value.");
+    public ActionElectionsFragmentToVoterInfoFragment setArgElection(
+        @NonNull Election argElection) {
+      if (argElection == null) {
+        throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("arg_division", argDivision);
+      this.arguments.put("arg_election", argElection);
       return this;
     }
 
@@ -57,18 +49,14 @@ public class ElectionsFragmentDirections {
     @NonNull
     public Bundle getArguments() {
       Bundle __result = new Bundle();
-      if (arguments.containsKey("arg_election_id")) {
-        int argElectionId = (int) arguments.get("arg_election_id");
-        __result.putInt("arg_election_id", argElectionId);
-      }
-      if (arguments.containsKey("arg_division")) {
-        Division argDivision = (Division) arguments.get("arg_division");
-        if (Parcelable.class.isAssignableFrom(Division.class) || argDivision == null) {
-          __result.putParcelable("arg_division", Parcelable.class.cast(argDivision));
-        } else if (Serializable.class.isAssignableFrom(Division.class)) {
-          __result.putSerializable("arg_division", Serializable.class.cast(argDivision));
+      if (arguments.containsKey("arg_election")) {
+        Election argElection = (Election) arguments.get("arg_election");
+        if (Parcelable.class.isAssignableFrom(Election.class) || argElection == null) {
+          __result.putParcelable("arg_election", Parcelable.class.cast(argElection));
+        } else if (Serializable.class.isAssignableFrom(Election.class)) {
+          __result.putSerializable("arg_election", Serializable.class.cast(argElection));
         } else {
-          throw new UnsupportedOperationException(Division.class.getName() + " must implement Parcelable or Serializable or must be an Enum.");
+          throw new UnsupportedOperationException(Election.class.getName() + " must implement Parcelable or Serializable or must be an Enum.");
         }
       }
       return __result;
@@ -80,14 +68,9 @@ public class ElectionsFragmentDirections {
     }
 
     @SuppressWarnings("unchecked")
-    public int getArgElectionId() {
-      return (int) arguments.get("arg_election_id");
-    }
-
-    @SuppressWarnings("unchecked")
     @NonNull
-    public Division getArgDivision() {
-      return (Division) arguments.get("arg_division");
+    public Election getArgElection() {
+      return (Election) arguments.get("arg_election");
     }
 
     @Override
@@ -99,16 +82,10 @@ public class ElectionsFragmentDirections {
           return false;
       }
       ActionElectionsFragmentToVoterInfoFragment that = (ActionElectionsFragmentToVoterInfoFragment) object;
-      if (arguments.containsKey("arg_election_id") != that.arguments.containsKey("arg_election_id")) {
+      if (arguments.containsKey("arg_election") != that.arguments.containsKey("arg_election")) {
         return false;
       }
-      if (getArgElectionId() != that.getArgElectionId()) {
-        return false;
-      }
-      if (arguments.containsKey("arg_division") != that.arguments.containsKey("arg_division")) {
-        return false;
-      }
-      if (getArgDivision() != null ? !getArgDivision().equals(that.getArgDivision()) : that.getArgDivision() != null) {
+      if (getArgElection() != null ? !getArgElection().equals(that.getArgElection()) : that.getArgElection() != null) {
         return false;
       }
       if (getActionId() != that.getActionId()) {
@@ -120,8 +97,7 @@ public class ElectionsFragmentDirections {
     @Override
     public int hashCode() {
       int result = 1;
-      result = 31 * result + getArgElectionId();
-      result = 31 * result + (getArgDivision() != null ? getArgDivision().hashCode() : 0);
+      result = 31 * result + (getArgElection() != null ? getArgElection().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
     }
@@ -129,8 +105,7 @@ public class ElectionsFragmentDirections {
     @Override
     public String toString() {
       return "ActionElectionsFragmentToVoterInfoFragment(actionId=" + getActionId() + "){"
-          + "argElectionId=" + getArgElectionId()
-          + ", argDivision=" + getArgDivision()
+          + "argElection=" + getArgElection()
           + "}";
     }
   }

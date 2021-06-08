@@ -9,9 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.Group;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.android.politicalpreparedness.R;
+import com.example.android.politicalpreparedness.election.VoterInfoViewModel;
+import com.example.android.politicalpreparedness.network.models.Election;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -40,6 +43,12 @@ public abstract class FragmentVoterInfoBinding extends ViewDataBinding {
   @NonNull
   public final TextView stateLocations;
 
+  @Bindable
+  protected Election mElection;
+
+  @Bindable
+  protected VoterInfoViewModel mVoterInfoViewModel;
+
   protected FragmentVoterInfoBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextView address, Group addressGroup, TextView electionDate, Toolbar electionName,
       TextView stateBallot, TextView stateCorrespondenceHeader, TextView stateHeader,
@@ -53,6 +62,20 @@ public abstract class FragmentVoterInfoBinding extends ViewDataBinding {
     this.stateCorrespondenceHeader = stateCorrespondenceHeader;
     this.stateHeader = stateHeader;
     this.stateLocations = stateLocations;
+  }
+
+  public abstract void setElection(@Nullable Election election);
+
+  @Nullable
+  public Election getElection() {
+    return mElection;
+  }
+
+  public abstract void setVoterInfoViewModel(@Nullable VoterInfoViewModel voterInfoViewModel);
+
+  @Nullable
+  public VoterInfoViewModel getVoterInfoViewModel() {
+    return mVoterInfoViewModel;
   }
 
   @NonNull

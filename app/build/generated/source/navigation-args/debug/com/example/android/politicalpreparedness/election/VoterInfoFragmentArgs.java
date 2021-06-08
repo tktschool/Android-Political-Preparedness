@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.navigation.NavArgs;
-import com.example.android.politicalpreparedness.network.models.Division;
+import com.example.android.politicalpreparedness.network.models.Election;
 import java.io.Serializable;
 import java.lang.IllegalArgumentException;
 import java.lang.Object;
@@ -28,57 +28,41 @@ public class VoterInfoFragmentArgs implements NavArgs {
   public static VoterInfoFragmentArgs fromBundle(@NonNull Bundle bundle) {
     VoterInfoFragmentArgs __result = new VoterInfoFragmentArgs();
     bundle.setClassLoader(VoterInfoFragmentArgs.class.getClassLoader());
-    if (bundle.containsKey("arg_election_id")) {
-      int argElectionId;
-      argElectionId = bundle.getInt("arg_election_id");
-      __result.arguments.put("arg_election_id", argElectionId);
-    } else {
-      throw new IllegalArgumentException("Required argument \"arg_election_id\" is missing and does not have an android:defaultValue");
-    }
-    if (bundle.containsKey("arg_division")) {
-      Division argDivision;
-      if (Parcelable.class.isAssignableFrom(Division.class) || Serializable.class.isAssignableFrom(Division.class)) {
-        argDivision = (Division) bundle.get("arg_division");
+    if (bundle.containsKey("arg_election")) {
+      Election argElection;
+      if (Parcelable.class.isAssignableFrom(Election.class) || Serializable.class.isAssignableFrom(Election.class)) {
+        argElection = (Election) bundle.get("arg_election");
       } else {
-        throw new UnsupportedOperationException(Division.class.getName() + " must implement Parcelable or Serializable or must be an Enum.");
+        throw new UnsupportedOperationException(Election.class.getName() + " must implement Parcelable or Serializable or must be an Enum.");
       }
-      if (argDivision == null) {
-        throw new IllegalArgumentException("Argument \"arg_division\" is marked as non-null but was passed a null value.");
+      if (argElection == null) {
+        throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
       }
-      __result.arguments.put("arg_division", argDivision);
+      __result.arguments.put("arg_election", argElection);
     } else {
-      throw new IllegalArgumentException("Required argument \"arg_division\" is missing and does not have an android:defaultValue");
+      throw new IllegalArgumentException("Required argument \"arg_election\" is missing and does not have an android:defaultValue");
     }
     return __result;
   }
 
   @SuppressWarnings("unchecked")
-  public int getArgElectionId() {
-    return (int) arguments.get("arg_election_id");
-  }
-
-  @SuppressWarnings("unchecked")
   @NonNull
-  public Division getArgDivision() {
-    return (Division) arguments.get("arg_division");
+  public Election getArgElection() {
+    return (Election) arguments.get("arg_election");
   }
 
   @SuppressWarnings("unchecked")
   @NonNull
   public Bundle toBundle() {
     Bundle __result = new Bundle();
-    if (arguments.containsKey("arg_election_id")) {
-      int argElectionId = (int) arguments.get("arg_election_id");
-      __result.putInt("arg_election_id", argElectionId);
-    }
-    if (arguments.containsKey("arg_division")) {
-      Division argDivision = (Division) arguments.get("arg_division");
-      if (Parcelable.class.isAssignableFrom(Division.class) || argDivision == null) {
-        __result.putParcelable("arg_division", Parcelable.class.cast(argDivision));
-      } else if (Serializable.class.isAssignableFrom(Division.class)) {
-        __result.putSerializable("arg_division", Serializable.class.cast(argDivision));
+    if (arguments.containsKey("arg_election")) {
+      Election argElection = (Election) arguments.get("arg_election");
+      if (Parcelable.class.isAssignableFrom(Election.class) || argElection == null) {
+        __result.putParcelable("arg_election", Parcelable.class.cast(argElection));
+      } else if (Serializable.class.isAssignableFrom(Election.class)) {
+        __result.putSerializable("arg_election", Serializable.class.cast(argElection));
       } else {
-        throw new UnsupportedOperationException(Division.class.getName() + " must implement Parcelable or Serializable or must be an Enum.");
+        throw new UnsupportedOperationException(Election.class.getName() + " must implement Parcelable or Serializable or must be an Enum.");
       }
     }
     return __result;
@@ -93,16 +77,10 @@ public class VoterInfoFragmentArgs implements NavArgs {
         return false;
     }
     VoterInfoFragmentArgs that = (VoterInfoFragmentArgs) object;
-    if (arguments.containsKey("arg_election_id") != that.arguments.containsKey("arg_election_id")) {
+    if (arguments.containsKey("arg_election") != that.arguments.containsKey("arg_election")) {
       return false;
     }
-    if (getArgElectionId() != that.getArgElectionId()) {
-      return false;
-    }
-    if (arguments.containsKey("arg_division") != that.arguments.containsKey("arg_division")) {
-      return false;
-    }
-    if (getArgDivision() != null ? !getArgDivision().equals(that.getArgDivision()) : that.getArgDivision() != null) {
+    if (getArgElection() != null ? !getArgElection().equals(that.getArgElection()) : that.getArgElection() != null) {
       return false;
     }
     return true;
@@ -111,16 +89,14 @@ public class VoterInfoFragmentArgs implements NavArgs {
   @Override
   public int hashCode() {
     int result = 1;
-    result = 31 * result + getArgElectionId();
-    result = 31 * result + (getArgDivision() != null ? getArgDivision().hashCode() : 0);
+    result = 31 * result + (getArgElection() != null ? getArgElection().hashCode() : 0);
     return result;
   }
 
   @Override
   public String toString() {
     return "VoterInfoFragmentArgs{"
-        + "argElectionId=" + getArgElectionId()
-        + ", argDivision=" + getArgDivision()
+        + "argElection=" + getArgElection()
         + "}";
   }
 
@@ -131,12 +107,11 @@ public class VoterInfoFragmentArgs implements NavArgs {
       this.arguments.putAll(original.arguments);
     }
 
-    public Builder(int argElectionId, @NonNull Division argDivision) {
-      this.arguments.put("arg_election_id", argElectionId);
-      if (argDivision == null) {
-        throw new IllegalArgumentException("Argument \"arg_division\" is marked as non-null but was passed a null value.");
+    public Builder(@NonNull Election argElection) {
+      if (argElection == null) {
+        throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("arg_division", argDivision);
+      this.arguments.put("arg_election", argElection);
     }
 
     @NonNull
@@ -146,29 +121,18 @@ public class VoterInfoFragmentArgs implements NavArgs {
     }
 
     @NonNull
-    public Builder setArgElectionId(int argElectionId) {
-      this.arguments.put("arg_election_id", argElectionId);
-      return this;
-    }
-
-    @NonNull
-    public Builder setArgDivision(@NonNull Division argDivision) {
-      if (argDivision == null) {
-        throw new IllegalArgumentException("Argument \"arg_division\" is marked as non-null but was passed a null value.");
+    public Builder setArgElection(@NonNull Election argElection) {
+      if (argElection == null) {
+        throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("arg_division", argDivision);
+      this.arguments.put("arg_election", argElection);
       return this;
     }
 
     @SuppressWarnings("unchecked")
-    public int getArgElectionId() {
-      return (int) arguments.get("arg_election_id");
-    }
-
-    @SuppressWarnings("unchecked")
     @NonNull
-    public Division getArgDivision() {
-      return (Division) arguments.get("arg_division");
+    public Election getArgElection() {
+      return (Election) arguments.get("arg_election");
     }
   }
 }

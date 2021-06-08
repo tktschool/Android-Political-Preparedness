@@ -31,6 +31,8 @@ public final class ElectionDao_Impl implements ElectionDao {
 
   private final SharedSQLiteStatement __preparedStmtOfDeleteAllElections;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeleteElection;
+
   public ElectionDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfElection = new EntityInsertionAdapter<Election>(__db) {
@@ -85,6 +87,13 @@ public final class ElectionDao_Impl implements ElectionDao {
         return _query;
       }
     };
+    this.__preparedStmtOfDeleteElection = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "delete from election_table where id = ?";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -110,6 +119,22 @@ public final class ElectionDao_Impl implements ElectionDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteAllElections.release(_stmt);
+    }
+  }
+
+  @Override
+  public void deleteElection(final int electionId) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteElection.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, electionId);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeleteElection.release(_stmt);
     }
   }
 

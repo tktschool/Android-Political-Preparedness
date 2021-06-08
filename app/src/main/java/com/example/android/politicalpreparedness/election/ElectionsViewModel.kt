@@ -26,4 +26,7 @@ class ElectionsViewModel(private val repository: ElectionRepository, application
 
     //TODO: Create functions to navigate to saved or upcoming election voter info
 
+
+
+
 }

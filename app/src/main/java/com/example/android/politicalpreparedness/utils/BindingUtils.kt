@@ -1,5 +1,7 @@
 package com.example.android.politicalpreparedness.utils
 
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.example.android.politicalpreparedness.network.models.Election
@@ -16,4 +18,9 @@ fun TextView.setElectionDate(item: Election) {
 fun Date.toFormatDateString(): String {
     val format = SimpleDateFormat("EEE dd MMM yyyy", Locale.US)
     return format.format(this)
+}
+
+@BindingAdapter("viewVisibility")
+fun TextView.bindVisible(status: String?) {
+    visibility = if (status.isNullOrEmpty()) View.GONE else View.VISIBLE
 }

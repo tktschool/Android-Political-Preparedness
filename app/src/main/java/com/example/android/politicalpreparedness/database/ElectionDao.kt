@@ -23,5 +23,8 @@ interface ElectionDao {
     @Query("delete from election_table")
     fun deleteAllElections()
 
+    @Query("delete from election_table where id = :electionId")
+    fun deleteElection(electionId: Int)
+
 
 }

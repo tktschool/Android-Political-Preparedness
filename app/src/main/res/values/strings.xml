@@ -5,13 +5,19 @@
     <!-- TODO: Add necessary string values -->
     <string name="logo_image_content_description">Voting image</string>
     <string name="upcoming_elections">Upcoming Elections</string>
+    <string name="election_information">Election Information</string>
+    <string name="voting_locations">Voting locations</string>
     <string name="saved_elections">Saved Elections</string>
+    <string name="follow_election">Follow election</string>
+    <string name="unfollow_election">Unfollow election</string>
     <string name="find_my_representatives">Find my representatives</string>
 
     <string name="profile_picture">Profile picture</string>
     <string name="twitter">Twitter</string>
     <string name="facebook">Facebook</string>
     <string name="web">Web</string>
+
+
 
 
 
