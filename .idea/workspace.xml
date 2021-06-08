@@ -34,41 +34,25 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBinding.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBinding.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBindingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_voter_info-layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/data_binding_layout_info_type_merge/debug/out/fragment_voter_info-layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/ActivityMainBindingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/ActivityMainBindingImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentElectionBindingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentElectionBindingImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentLaunchBindingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentLaunchBindingImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentRepresentativeBindingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentRepresentativeBindingImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBinding.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBinding.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBindingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBindingImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/ListItemRepresenttativeBindingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/android/politicalpreparedness/databinding/ListItemRepresenttativeBindingImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/ActivityMainBindingImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/ActivityMainBindingImpl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentElectionBindingImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentElectionBindingImpl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentLaunchBindingImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentLaunchBindingImpl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentRepresentativeBindingImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentRepresentativeBindingImpl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBinding.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBinding.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBindingImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/FragmentVoterInfoBindingImpl.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/ListItemRepresenttativeBindingImpl.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/databinding/ListItemRepresenttativeBindingImpl.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/election/VoterInfoViewModel.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/election/VoterInfoViewModel.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/repository/ElectionRepository$refreshUpcomingElections$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/repository/ElectionRepository$refreshUpcomingElections$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/repository/ElectionRepository.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/com/example/android/politicalpreparedness/repository/ElectionRepository.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_voter_info.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_voter_info.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterDir="false" />
@@ -132,21 +116,12 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-structure.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/classpath-structure.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incrementalData/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.kapt_metadata" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.kapt_metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/MainActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/election/VoterInfoViewModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/repository/ElectionRepository$refreshUpcomingElections$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/repository/ElectionRepository$refreshUpcomingElections$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/example/android/politicalpreparedness/repository/ElectionRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/election/VoterInfoViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/election/VoterInfoViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/network/CivicsHttpClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/network/CivicsHttpClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/repository/ElectionRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/repository/ElectionRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_voter_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_voter_info.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -328,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623147115066</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=" - Add follow button">
+      <created>1623149963063</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623149963063</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -398,7 +380,8 @@
     <MESSAGE value=" - git rm" />
     <MESSAGE value=" - Move form old git(init commit), Add show location" />
     <MESSAGE value=" - Add ballot information" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Add ballot information" />
+    <MESSAGE value=" - Add follow button" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Add follow button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1014" y="515" key="#Notifications" timestamp="1621484478756">
@@ -429,10 +412,10 @@
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
     <state x="1753" y="469" key="AndroidCreateXmlResourceDialog/0.25.2560.1325@0.25.2560.1325" timestamp="1621410759845" />
-    <state x="0" y="25" width="2560" height="1325" key="CommitChangelistDialog2" timestamp="1623147112495">
+    <state x="0" y="25" width="2560" height="1325" key="CommitChangelistDialog2" timestamp="1623149960720">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state x="0" y="25" width="2560" height="1325" key="CommitChangelistDialog2/0.25.2560.1325@0.25.2560.1325" timestamp="1623147112495" />
+    <state x="0" y="25" width="2560" height="1325" key="CommitChangelistDialog2/0.25.2560.1325@0.25.2560.1325" timestamp="1623149960720" />
     <state width="1000" height="613" key="DebuggerActiveHint" timestamp="1623140239684">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
@@ -449,38 +432,42 @@
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
     <state x="302" y="145" width="1830" height="1125" key="Github.UntrackedFilesDialog/0.25.2560.1325@0.25.2560.1325" timestamp="1621490619607" />
-    <state width="1238" height="376" key="GridCell.Tab.0.bottom" timestamp="1623149870370">
+    <state width="994" height="376" key="GridCell.Tab.0.bottom" timestamp="1623176512541">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.0.bottom/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870370" />
-    <state width="1238" height="376" key="GridCell.Tab.0.center" timestamp="1623149870369">
+    <state width="994" height="376" key="GridCell.Tab.0.bottom/0.25.2560.1325@0.25.2560.1325" timestamp="1623176512541" />
+    <state width="994" height="376" key="GridCell.Tab.0.center" timestamp="1623176512540">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.0.center/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870369" />
-    <state width="1238" height="376" key="GridCell.Tab.0.left" timestamp="1623149870369">
+    <state width="994" height="376" key="GridCell.Tab.0.center/0.25.2560.1325@0.25.2560.1325" timestamp="1623176512540" />
+    <state width="994" height="376" key="GridCell.Tab.0.left" timestamp="1623176512540">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.0.left/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870369" />
-    <state width="1238" height="376" key="GridCell.Tab.0.right" timestamp="1623149870370">
+    <state width="994" height="376" key="GridCell.Tab.0.left/0.25.2560.1325@0.25.2560.1325" timestamp="1623176512540" />
+    <state width="994" height="376" key="GridCell.Tab.0.right" timestamp="1623176512540">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.0.right/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870370" />
-    <state width="1238" height="376" key="GridCell.Tab.1.bottom" timestamp="1623149870371">
+    <state width="994" height="376" key="GridCell.Tab.0.right/0.25.2560.1325@0.25.2560.1325" timestamp="1623176512540" />
+    <state width="994" height="376" key="GridCell.Tab.1.bottom" timestamp="1623176510827">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.1.bottom/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870371" />
-    <state width="1238" height="376" key="GridCell.Tab.1.center" timestamp="1623149870370">
+    <state width="994" height="376" key="GridCell.Tab.1.bottom/0.25.2560.1325@0.25.2560.1325" timestamp="1623176510827" />
+    <state width="994" height="376" key="GridCell.Tab.1.center" timestamp="1623176510827">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.1.center/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870370" />
-    <state width="1238" height="376" key="GridCell.Tab.1.left" timestamp="1623149870370">
+    <state width="994" height="376" key="GridCell.Tab.1.center/0.25.2560.1325@0.25.2560.1325" timestamp="1623176510827" />
+    <state width="994" height="376" key="GridCell.Tab.1.left" timestamp="1623176510827">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.1.left/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870370" />
-    <state width="1238" height="376" key="GridCell.Tab.1.right" timestamp="1623149870371">
+    <state width="994" height="376" key="GridCell.Tab.1.left/0.25.2560.1325@0.25.2560.1325" timestamp="1623176510827" />
+    <state width="994" height="376" key="GridCell.Tab.1.right" timestamp="1623176510827">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state width="1238" height="376" key="GridCell.Tab.1.right/0.25.2560.1325@0.25.2560.1325" timestamp="1623149870371" />
+    <state width="994" height="376" key="GridCell.Tab.1.right/0.25.2560.1325@0.25.2560.1325" timestamp="1623176510827" />
+    <state x="176" y="496" key="Registry" timestamp="1623170572256">
+      <screen x="0" y="25" width="2560" height="1325" />
+    </state>
+    <state x="176" y="496" key="Registry/0.25.2560.1325@0.25.2560.1325" timestamp="1623170572256" />
     <state x="1614" y="412" key="RollbackChangesDialog" timestamp="1621481838313">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
@@ -493,10 +480,10 @@
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
     <state x="1772" y="605" key="VCS.ChangelistChooser/0.25.2560.1325@0.25.2560.1325" timestamp="1621481900638" />
-    <state x="880" y="209" width="960" height="741" key="Vcs.Push.Dialog.v2" timestamp="1623147119483">
+    <state x="880" y="209" width="960" height="741" key="Vcs.Push.Dialog.v2" timestamp="1623149967034">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
-    <state x="880" y="209" width="960" height="741" key="Vcs.Push.Dialog.v2/0.25.2560.1325@0.25.2560.1325" timestamp="1623147119483" />
+    <state x="880" y="209" width="960" height="741" key="Vcs.Push.Dialog.v2/0.25.2560.1325@0.25.2560.1325" timestamp="1623149967034" />
     <state x="1726" y="605" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621482559386">
       <screen x="0" y="25" width="2560" height="1325" />
     </state>
@@ -511,6 +498,20 @@
     <state x="1585" y="327" width="670" height="676" key="search.everywhere.popup/0.25.2560.1325@0.25.2560.1325" timestamp="1623124672082" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/election/VoterInfoViewModel.kt</url>
+          <line>57</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/android/politicalpreparedness/election/VoterInfoViewModel.kt</url>
+          <line>60</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
         <watch expression="hasVotingLocationsInfo" />

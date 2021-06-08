@@ -14,11 +14,10 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.state_header, 5);
-        sViewsWithIds.put(R.id.address_group, 6);
-        sViewsWithIds.put(R.id.state_correspondence_header, 7);
-        sViewsWithIds.put(R.id.address, 8);
-        sViewsWithIds.put(R.id.follow_button, 9);
+        sViewsWithIds.put(R.id.state_header, 6);
+        sViewsWithIds.put(R.id.address_group, 7);
+        sViewsWithIds.put(R.id.state_correspondence_header, 8);
+        sViewsWithIds.put(R.id.address, 9);
     }
     // views
     @NonNull
@@ -26,6 +25,8 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback3;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback4;
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     // values
@@ -36,19 +37,20 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
         this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private FragmentVoterInfoBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 2
-            , (android.widget.TextView) bindings[8]
-            , (androidx.constraintlayout.widget.Group) bindings[6]
+        super(bindingComponent, root, 3
+            , (android.widget.TextView) bindings[9]
+            , (androidx.constraintlayout.widget.Group) bindings[7]
             , (android.widget.TextView) bindings[2]
             , (androidx.appcompat.widget.Toolbar) bindings[1]
-            , (android.widget.Button) bindings[9]
+            , (android.widget.Button) bindings[5]
             , (android.widget.TextView) bindings[4]
-            , (android.widget.TextView) bindings[7]
-            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[8]
+            , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[3]
             );
         this.electionDate.setTag(null);
         this.electionName.setTag(null);
+        this.followButton.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.stateBallot.setTag(null);
@@ -56,6 +58,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
         setRootTag(root);
         // listeners
         mCallback3 = new com.example.android.politicalpreparedness.generated.callback.OnClickListener(this, 2);
+        mCallback4 = new com.example.android.politicalpreparedness.generated.callback.OnClickListener(this, 3);
         mCallback2 = new com.example.android.politicalpreparedness.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
@@ -63,7 +66,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x10L;
+                mDirtyFlags = 0x20L;
         }
         requestRebind();
     }
@@ -96,7 +99,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     public void setVoterInfoViewModel(@Nullable com.example.android.politicalpreparedness.election.VoterInfoViewModel VoterInfoViewModel) {
         this.mVoterInfoViewModel = VoterInfoViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x4L;
+            mDirtyFlags |= 0x8L;
         }
         notifyPropertyChanged(BR.voterInfoViewModel);
         super.requestRebind();
@@ -104,7 +107,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     public void setElection(@Nullable com.example.android.politicalpreparedness.network.models.Election Election) {
         this.mElection = Election;
         synchronized(this) {
-            mDirtyFlags |= 0x8L;
+            mDirtyFlags |= 0x10L;
         }
         notifyPropertyChanged(BR.election);
         super.requestRebind();
@@ -117,6 +120,8 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
                 return onChangeVoterInfoViewModelHasBallotInfo((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
             case 1 :
                 return onChangeVoterInfoViewModelHasVotingLocationsInfo((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
+            case 2 :
+                return onChangeVoterInfoViewModelFollowButtonState((androidx.lifecycle.LiveData<java.lang.String>) object, fieldId);
         }
         return false;
     }
@@ -138,6 +143,15 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
         }
         return false;
     }
+    private boolean onChangeVoterInfoViewModelFollowButtonState(androidx.lifecycle.LiveData<java.lang.String> VoterInfoViewModelFollowButtonState, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        return false;
+    }
 
     @Override
     protected void executeBindings() {
@@ -149,15 +163,17 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
         java.lang.String ElectionName1 = null;
         java.lang.String voterInfoViewModelHasBallotInfoGetValue = null;
         androidx.lifecycle.LiveData<java.lang.String> voterInfoViewModelHasBallotInfo = null;
+        java.lang.String voterInfoViewModelFollowButtonStateGetValue = null;
         androidx.lifecycle.LiveData<java.lang.String> voterInfoViewModelHasVotingLocationsInfo = null;
+        androidx.lifecycle.LiveData<java.lang.String> voterInfoViewModelFollowButtonState = null;
         com.example.android.politicalpreparedness.election.VoterInfoViewModel voterInfoViewModel = mVoterInfoViewModel;
         java.lang.String voterInfoViewModelHasVotingLocationsInfoGetValue = null;
         com.example.android.politicalpreparedness.network.models.Election election = mElection;
 
-        if ((dirtyFlags & 0x17L) != 0) {
+        if ((dirtyFlags & 0x2fL) != 0) {
 
 
-            if ((dirtyFlags & 0x15L) != 0) {
+            if ((dirtyFlags & 0x29L) != 0) {
 
                     if (voterInfoViewModel != null) {
                         // read voterInfoViewModel.hasBallotInfo
@@ -171,7 +187,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
                         voterInfoViewModelHasBallotInfoGetValue = voterInfoViewModelHasBallotInfo.getValue();
                     }
             }
-            if ((dirtyFlags & 0x16L) != 0) {
+            if ((dirtyFlags & 0x2aL) != 0) {
 
                     if (voterInfoViewModel != null) {
                         // read voterInfoViewModel.hasVotingLocationsInfo
@@ -185,8 +201,22 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
                         voterInfoViewModelHasVotingLocationsInfoGetValue = voterInfoViewModelHasVotingLocationsInfo.getValue();
                     }
             }
+            if ((dirtyFlags & 0x2cL) != 0) {
+
+                    if (voterInfoViewModel != null) {
+                        // read voterInfoViewModel.followButtonState
+                        voterInfoViewModelFollowButtonState = voterInfoViewModel.getFollowButtonState();
+                    }
+                    updateLiveDataRegistration(2, voterInfoViewModelFollowButtonState);
+
+
+                    if (voterInfoViewModelFollowButtonState != null) {
+                        // read voterInfoViewModel.followButtonState.getValue()
+                        voterInfoViewModelFollowButtonStateGetValue = voterInfoViewModelFollowButtonState.getValue();
+                    }
+            }
         }
-        if ((dirtyFlags & 0x18L) != 0) {
+        if ((dirtyFlags & 0x30L) != 0) {
 
 
 
@@ -196,24 +226,30 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x18L) != 0) {
+        if ((dirtyFlags & 0x30L) != 0) {
             // api target 1
 
             com.example.android.politicalpreparedness.utils.BindingUtilsKt.setElectionDate(this.electionDate, election);
             this.electionName.setTitle(ElectionName1);
         }
-        if ((dirtyFlags & 0x10L) != 0) {
+        if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
+            this.followButton.setOnClickListener(mCallback4);
             this.stateBallot.setOnClickListener(mCallback3);
             this.stateLocations.setOnClickListener(mCallback2);
         }
-        if ((dirtyFlags & 0x15L) != 0) {
+        if ((dirtyFlags & 0x2cL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.followButton, voterInfoViewModelFollowButtonStateGetValue);
+        }
+        if ((dirtyFlags & 0x29L) != 0) {
             // api target 1
 
             com.example.android.politicalpreparedness.utils.BindingUtilsKt.bindVisible(this.stateBallot, voterInfoViewModelHasBallotInfoGetValue);
         }
-        if ((dirtyFlags & 0x16L) != 0) {
+        if ((dirtyFlags & 0x2aL) != 0) {
             // api target 1
 
             com.example.android.politicalpreparedness.utils.BindingUtilsKt.bindVisible(this.stateLocations, voterInfoViewModelHasVotingLocationsInfoGetValue);
@@ -237,6 +273,23 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
 
 
                     voterInfoViewModel.onBallotInformationClicked();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // voterInfoViewModel
+                com.example.android.politicalpreparedness.election.VoterInfoViewModel voterInfoViewModel = mVoterInfoViewModel;
+                // voterInfoViewModel != null
+                boolean voterInfoViewModelJavaLangObjectNull = false;
+
+
+
+                voterInfoViewModelJavaLangObjectNull = (voterInfoViewModel) != (null);
+                if (voterInfoViewModelJavaLangObjectNull) {
+
+
+                    voterInfoViewModel.onFollowButtonClicked();
                 }
                 break;
             }
@@ -264,9 +317,10 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
     /* flag mapping
         flag 0 (0x1L): voterInfoViewModel.hasBallotInfo
         flag 1 (0x2L): voterInfoViewModel.hasVotingLocationsInfo
-        flag 2 (0x3L): voterInfoViewModel
-        flag 3 (0x4L): election
-        flag 4 (0x5L): null
+        flag 2 (0x3L): voterInfoViewModel.followButtonState
+        flag 3 (0x4L): voterInfoViewModel
+        flag 4 (0x5L): election
+        flag 5 (0x6L): null
     flag mapping end*/
     //end
 }

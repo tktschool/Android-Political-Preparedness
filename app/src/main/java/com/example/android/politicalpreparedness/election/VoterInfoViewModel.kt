@@ -38,6 +38,10 @@ class VoterInfoViewModel(
     val showBallotInformation: LiveData<Boolean>
         get() = _showBallotInformation
 
+    private val _followButtonState = MutableLiveData<String>()
+    val followButtonState: LiveData<String>
+        get() = _followButtonState
+
     //Add var and methods to support loading URLs
     fun onVotingLocationsClicked() {
         _showVotingLocations.value = true
@@ -48,11 +52,25 @@ class VoterInfoViewModel(
     }
 
     //TODO: Add var and methods to save and remove elections to local database
-    suspend fun onFollowButtonClicked() {
-        if (repository.hasElection(election)) {
-            repository.unfollowElection(election)
-        } else {
-            repository.followElection(election)
+    fun onFollowButtonClicked() {
+        viewModelScope.launch {
+            if (repository.hasElection(election)) {
+                repository.unfollowElection(election)
+                _followButtonState.value = unfollowString
+            } else {
+                repository.followElection(election)
+                _followButtonState.value = followString
+            }
+        }
+    }
+
+    private suspend fun initFollowButton() {
+        viewModelScope.launch {
+            if (repository.hasElection(election)) {
+                _followButtonState.value = followString
+            } else {
+                _followButtonState.value = unfollowString
+            }
         }
     }
 
@@ -85,6 +103,7 @@ class VoterInfoViewModel(
     init {
         viewModelScope.launch {
             getVoterInfo()
+            initFollowButton()
         }
     }
 
