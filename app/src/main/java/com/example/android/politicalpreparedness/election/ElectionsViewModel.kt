@@ -13,10 +13,12 @@ class ElectionsViewModel(private val repository: ElectionRepository, application
 
     //TODO: Create live data val for upcoming elections
     val upcomingElection = repository.upcomingElection
+    val savedElections = repository.savedElections
 
     init {
         viewModelScope.launch {
             repository.refreshUpcomingElections()
+            //repository.getSavedElection()
         }
     }
 
@@ -25,8 +27,5 @@ class ElectionsViewModel(private val repository: ElectionRepository, application
     //TODO: Create val and functions to populate live data for upcoming elections from the API and saved elections from local database
 
     //TODO: Create functions to navigate to saved or upcoming election voter info
-
-
-
 
 }

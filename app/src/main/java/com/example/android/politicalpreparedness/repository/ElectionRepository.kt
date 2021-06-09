@@ -7,6 +7,7 @@ import com.example.android.politicalpreparedness.database.ElectionDatabase
 import com.example.android.politicalpreparedness.network.CivicsApi
 import com.example.android.politicalpreparedness.network.models.Election
 import com.example.android.politicalpreparedness.network.models.VoterInfoResponse
+import com.example.android.politicalpreparedness.representative.model.Representative
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.lang.Exception
@@ -17,10 +18,16 @@ class ElectionRepository(private val database: ElectionDatabase) {
     val upcomingElection: LiveData<List<Election>>
         get() = _upcomingElections
 
+    val savedElections: LiveData<List<Election>>
+        get() = database.electionDao.getAllElections()
+
     private val _voterInfo = MutableLiveData<VoterInfoResponse>()
     val voterInfo: LiveData<VoterInfoResponse>
         get() = _voterInfo
 
+    private val _representatives = MutableLiveData<List<Representative>>()
+    val representatives: LiveData<List<Representative>>
+        get() = _representatives
 
     suspend fun followElection(election: Election) {
         withContext(Dispatchers.IO) {
@@ -47,6 +54,17 @@ class ElectionRepository(private val database: ElectionDatabase) {
                 _upcomingElections.postValue(result.elections)
             } catch (e: Exception) {
                 e.message?.let { Log.e("ElectionRepository refreshUpcomingElections", e.message!!) }
+            }
+        }
+    }
+
+    suspend fun refreshRepresentatives(address: String) {
+        withContext(Dispatchers.IO) {
+            try {
+                val (offices, officials) = CivicsApi.retrofitService.getRepresentatives(address)
+                _representatives.postValue(offices.flatMap { office -> office.getRepresentatives(officials) })
+            } catch (e: Exception) {
+                e.message?.let { Log.e("ElectionRepository refreshRepresentatives", e.message!!) }
             }
         }
     }

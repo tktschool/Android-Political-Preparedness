@@ -11,5 +11,7 @@ public class BR {
 
   public static final int representative = 4;
 
-  public static final int voterInfoViewModel = 5;
+  public static final int viewModel = 5;
+
+  public static final int voterInfoViewModel = 6;
 }

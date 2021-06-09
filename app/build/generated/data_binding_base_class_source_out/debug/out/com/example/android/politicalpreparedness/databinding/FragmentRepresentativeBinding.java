@@ -10,9 +10,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.android.politicalpreparedness.R;
+import com.example.android.politicalpreparedness.representative.RepresentativeViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -47,6 +49,9 @@ public abstract class FragmentRepresentativeBinding extends ViewDataBinding {
   @NonNull
   public final EditText zip;
 
+  @Bindable
+  protected RepresentativeViewModel mViewModel;
+
   protected FragmentRepresentativeBinding(Object _bindingComponent, View _root,
       int _localFieldCount, EditText addressLine1, EditText addressLine2, Button buttonLocation,
       Button buttonSearch, EditText city, TextView listPlaceholder, TextView representativeTitle,
@@ -62,6 +67,13 @@ public abstract class FragmentRepresentativeBinding extends ViewDataBinding {
     this.searchTitle = searchTitle;
     this.state = state;
     this.zip = zip;
+  }
+
+  public abstract void setViewModel(@Nullable RepresentativeViewModel viewModel);
+
+  @Nullable
+  public RepresentativeViewModel getViewModel() {
+    return mViewModel;
   }
 
   @NonNull

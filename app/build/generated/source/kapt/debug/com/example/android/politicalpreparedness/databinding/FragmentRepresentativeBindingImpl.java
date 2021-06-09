@@ -59,7 +59,7 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x1L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -77,7 +77,17 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     @Override
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
+        if (BR.viewModel == variableId) {
+            setViewModel((com.example.android.politicalpreparedness.representative.RepresentativeViewModel) variable);
+        }
+        else {
+            variableSet = false;
+        }
             return variableSet;
+    }
+
+    public void setViewModel(@Nullable com.example.android.politicalpreparedness.representative.RepresentativeViewModel ViewModel) {
+        this.mViewModel = ViewModel;
     }
 
     @Override
@@ -101,7 +111,8 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): null
+        flag 0 (0x1L): viewModel
+        flag 1 (0x2L): null
     flag mapping end*/
     //end
 }

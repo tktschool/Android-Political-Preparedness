@@ -48,6 +48,10 @@
         "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/layout/fragment_launch.xml"
     },
     {
+        "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/res/merged/debug/xml_fragment_representative_scene.xml.flat",
+        "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/xml/fragment_representative_scene.xml"
+    },
+    {
         "merged": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/build/intermediates/res/merged/debug/drawable_ic_profile.xml.flat",
         "source": "/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/res/drawable/ic_profile.xml"
     },

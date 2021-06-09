@@ -22,6 +22,7 @@ class LaunchFragment : Fragment() {
         //TODO
         //binding.representativeButton.setOnClickListener { navToRepresentatives() }
         binding.upcomingButton.setOnClickListener { navToElections() }
+        binding.representativesButton.setOnClickListener { navToRepresentatives() }
 
         return binding.root
     }

@@ -36,7 +36,6 @@ class ElectionsFragment : BaseFragment() {
     private lateinit var upcomingElectionsListAdapter: ElectionListAdapter
     private lateinit var savedElectionsListAdapter: ElectionListAdapter
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -63,12 +62,30 @@ class ElectionsFragment : BaseFragment() {
             )
         })
 
+        val adapter2 = ElectionListAdapter(ElectionListener { election ->
+            _viewModel.navigationCommand.postValue(
+                NavigationCommand.To(
+                    ElectionsFragmentDirections.actionElectionsFragmentToVoterInfoFragment(election)
+                )
+            )
+        })
+
         binding.upComingRecyclerView.adapter = adapter
+        binding.saveElectionRecyclerView.adapter = adapter2
+
         _viewModel.upcomingElection.observe(viewLifecycleOwner) {
             it.let {
                 adapter.submitList(it)
             }
         }
+
+        _viewModel.savedElections.observe(viewLifecycleOwner) {
+            it.let {
+                adapter2.submitList(it)
+            }
+        }
+
+
 
         //TODO: Populate recycler adapters
 
