@@ -36,6 +36,17 @@ fun Fragment.setDisplayHomeAsUpEnabled(bool: Boolean) {
     }
 }
 
+fun Fragment.setSupportActionBar(bool: Boolean) {
+    if (activity is AppCompatActivity) {
+            if (bool){
+                (activity as AppCompatActivity).supportActionBar?.show()
+            } else {
+                (activity as AppCompatActivity).supportActionBar?.hide()
+            }
+
+    }
+}
+
 //animate changing the view visibility
 fun View.fadeIn() {
     this.visibility = View.VISIBLE

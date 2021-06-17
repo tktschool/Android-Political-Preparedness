@@ -18,7 +18,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
-
     </style>
 
     <style name="item_title_style">

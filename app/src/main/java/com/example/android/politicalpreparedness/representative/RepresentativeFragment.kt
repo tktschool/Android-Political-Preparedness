@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import com.example.android.politicalpreparedness.base.BaseFragment
 import com.example.android.politicalpreparedness.database.ElectionDatabase
 import com.example.android.politicalpreparedness.databinding.FragmentRepresentativeBinding
@@ -20,6 +21,7 @@ import com.example.android.politicalpreparedness.election.ElectionsViewModel
 import com.example.android.politicalpreparedness.election.ElectionsViewModelFactory
 import com.example.android.politicalpreparedness.network.models.Address
 import com.example.android.politicalpreparedness.repository.ElectionRepository
+import com.example.android.politicalpreparedness.representative.adapter.RepresentativeListAdapter
 import com.google.android.gms.location.FusedLocationProviderClient
 import java.util.Locale
 
@@ -45,7 +47,9 @@ class DetailFragment : BaseFragment() {
     }
 
     companion object {
-        //TODO: Add Constant for Location request
+        const val REQUEST_FOREGROUND_ONLY_PERMISSIONS_REQUEST_CODE = 34
+        const val REQUEST_BACKGROUND_ONLY_PERMISSIONS_REQUEST_CODE = 35
+        const val REQUEST_TURN_DEVICE_LOCATION_ON = 29
     }
 
     override fun onCreateView(
@@ -58,11 +62,19 @@ class DetailFragment : BaseFragment() {
         binding = FragmentRepresentativeBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
         binding.viewModel = _viewModel
-        //TODO: Define and assign Representative adapter
 
         //TODO: Populate Representative adapter
+        val representativeListAdapter = RepresentativeListAdapter()
 
+        _viewModel.representatives.observe(viewLifecycleOwner, { representatives ->
+            representatives?.let {
+
+            }
+        })
         //TODO: Establish button listeners for field and location search
+
+
+
         binding.buttonLocation.setOnClickListener {
             if (checkLocationPermissions()) {
                 getLocation()
