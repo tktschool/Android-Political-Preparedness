@@ -11,12 +11,14 @@ import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.example.android.politicalpreparedness.network.models.Division;
 import com.example.android.politicalpreparedness.network.models.Election;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Long;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -159,7 +161,11 @@ public final class ElectionDao_Impl implements ElectionDao {
             final int _tmpId;
             _tmpId = _cursor.getInt(_cursorIndexOfId);
             final String _tmpName;
-            _tmpName = _cursor.getString(_cursorIndexOfName);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
             final Date _tmpElectionDay;
             final Long _tmp;
             if (_cursor.isNull(_cursorIndexOfElectionDay)) {
@@ -171,11 +177,23 @@ public final class ElectionDao_Impl implements ElectionDao {
             final Division _tmpDivision;
             if (! (_cursor.isNull(_cursorIndexOfId_1) && _cursor.isNull(_cursorIndexOfCountry) && _cursor.isNull(_cursorIndexOfState))) {
               final String _tmpId_1;
-              _tmpId_1 = _cursor.getString(_cursorIndexOfId_1);
+              if (_cursor.isNull(_cursorIndexOfId_1)) {
+                _tmpId_1 = null;
+              } else {
+                _tmpId_1 = _cursor.getString(_cursorIndexOfId_1);
+              }
               final String _tmpCountry;
-              _tmpCountry = _cursor.getString(_cursorIndexOfCountry);
+              if (_cursor.isNull(_cursorIndexOfCountry)) {
+                _tmpCountry = null;
+              } else {
+                _tmpCountry = _cursor.getString(_cursorIndexOfCountry);
+              }
               final String _tmpState;
-              _tmpState = _cursor.getString(_cursorIndexOfState);
+              if (_cursor.isNull(_cursorIndexOfState)) {
+                _tmpState = null;
+              } else {
+                _tmpState = _cursor.getString(_cursorIndexOfState);
+              }
               _tmpDivision = new Division(_tmpId_1,_tmpCountry,_tmpState);
             }  else  {
               _tmpDivision = null;
@@ -216,7 +234,11 @@ public final class ElectionDao_Impl implements ElectionDao {
         final int _tmpId;
         _tmpId = _cursor.getInt(_cursorIndexOfId);
         final String _tmpName;
-        _tmpName = _cursor.getString(_cursorIndexOfName);
+        if (_cursor.isNull(_cursorIndexOfName)) {
+          _tmpName = null;
+        } else {
+          _tmpName = _cursor.getString(_cursorIndexOfName);
+        }
         final Date _tmpElectionDay;
         final Long _tmp;
         if (_cursor.isNull(_cursorIndexOfElectionDay)) {
@@ -228,11 +250,23 @@ public final class ElectionDao_Impl implements ElectionDao {
         final Division _tmpDivision;
         if (! (_cursor.isNull(_cursorIndexOfId_1) && _cursor.isNull(_cursorIndexOfCountry) && _cursor.isNull(_cursorIndexOfState))) {
           final String _tmpId_1;
-          _tmpId_1 = _cursor.getString(_cursorIndexOfId_1);
+          if (_cursor.isNull(_cursorIndexOfId_1)) {
+            _tmpId_1 = null;
+          } else {
+            _tmpId_1 = _cursor.getString(_cursorIndexOfId_1);
+          }
           final String _tmpCountry;
-          _tmpCountry = _cursor.getString(_cursorIndexOfCountry);
+          if (_cursor.isNull(_cursorIndexOfCountry)) {
+            _tmpCountry = null;
+          } else {
+            _tmpCountry = _cursor.getString(_cursorIndexOfCountry);
+          }
           final String _tmpState;
-          _tmpState = _cursor.getString(_cursorIndexOfState);
+          if (_cursor.isNull(_cursorIndexOfState)) {
+            _tmpState = null;
+          } else {
+            _tmpState = _cursor.getString(_cursorIndexOfState);
+          }
           _tmpDivision = new Division(_tmpId_1,_tmpCountry,_tmpState);
         }  else  {
           _tmpDivision = null;
@@ -246,5 +280,9 @@ public final class ElectionDao_Impl implements ElectionDao {
       _cursor.close();
       _statement.release();
     }
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

@@ -27,6 +27,7 @@ public class ElectionsFragmentDirections {
   public static class ActionElectionsFragmentToVoterInfoFragment implements NavDirections {
     private final HashMap arguments = new HashMap();
 
+    @SuppressWarnings("unchecked")
     private ActionElectionsFragmentToVoterInfoFragment(@NonNull Election argElection) {
       if (argElection == null) {
         throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
@@ -35,6 +36,7 @@ public class ElectionsFragmentDirections {
     }
 
     @NonNull
+    @SuppressWarnings("unchecked")
     public ActionElectionsFragmentToVoterInfoFragment setArgElection(
         @NonNull Election argElection) {
       if (argElection == null) {

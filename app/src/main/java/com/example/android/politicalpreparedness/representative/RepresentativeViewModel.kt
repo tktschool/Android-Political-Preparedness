@@ -1,6 +1,7 @@
 package com.example.android.politicalpreparedness.representative
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.android.politicalpreparedness.base.BaseViewModel
 import com.example.android.politicalpreparedness.election.ElectionsViewModel
@@ -33,23 +34,21 @@ class RepresentativeViewModel(
 
      */
 
-    init {
-        viewModelScope.launch {
-
-        }
-    }
-
     fun getRepresentativesByAddress(address: Address) {
         viewModelScope.launch {
             try {
                 repository.refreshRepresentatives(address.toFormattedString())
-            } catch (ex: Exception) {
-
+            } catch (e: Exception) {
+                e.message?.let {
+                    showErrorMessage.value = e.message
+                }
             }
         }
     }
 
-    //TODO: Create function to get address from individual fields
+    fun setAddress(address: Address) {
+        _address.value = address
+    }
 
 }
 

@@ -28,7 +28,7 @@
 17        android:allowBackup="true"
 17-->/Users/sarayutp/nd940-cap-advanced-android-programming-project-starter/starter/app/src/main/AndroidManifest.xml:11:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.3.1] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/08c5354871c726194a889a1a95c18283/core-1.3.1/AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/f502d98455b1aa6123fe18e1d520f21e/core-1.5.0/AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:extractNativeLibs="false"
 21        android:icon="@mipmap/ic_launcher"
@@ -58,40 +58,40 @@
 33        </activity>
 34
 35        <service
-35-->[androidx.room:room-runtime:2.2.5] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3aff1afe696995def5dd34275daf025b/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+35-->[androidx.room:room-runtime:2.3.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/a2fe2f75ecc5565e457e8ed2545d26bf/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
 36            android:name="androidx.room.MultiInstanceInvalidationService"
-36-->[androidx.room:room-runtime:2.2.5] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3aff1afe696995def5dd34275daf025b/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+36-->[androidx.room:room-runtime:2.3.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/a2fe2f75ecc5565e457e8ed2545d26bf/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
 37            android:directBootAware="true"
-37-->[androidx.room:room-runtime:2.2.5] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3aff1afe696995def5dd34275daf025b/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+37-->[androidx.room:room-runtime:2.3.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/a2fe2f75ecc5565e457e8ed2545d26bf/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
 38            android:exported="false" />
-38-->[androidx.room:room-runtime:2.2.5] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3aff1afe696995def5dd34275daf025b/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+38-->[androidx.room:room-runtime:2.3.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/a2fe2f75ecc5565e457e8ed2545d26bf/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
 39
 40        <provider
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/62efd2a8616a6e5ff6d00e564761c0c7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/46923933ad73f26748b3ab716661910f/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 41            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-41-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/62efd2a8616a6e5ff6d00e564761c0c7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/46923933ad73f26748b3ab716661910f/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
 42            android:authorities="com.example.android.politicalpreparedness.lifecycle-process"
-42-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/62efd2a8616a6e5ff6d00e564761c0c7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/46923933ad73f26748b3ab716661910f/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
 43            android:exported="false"
-43-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/62efd2a8616a6e5ff6d00e564761c0c7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+43-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/46923933ad73f26748b3ab716661910f/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
 44            android:multiprocess="true" />
-44-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/62efd2a8616a6e5ff6d00e564761c0c7/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+44-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/46923933ad73f26748b3ab716661910f/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
 45
 46        <activity
-46-->[com.google.android.gms:play-services-base:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/87368764c6779936465a2f05b68d072a/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+46-->[com.google.android.gms:play-services-base:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3b556e40c85f6b91f4d59e6243478c9e/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
 47            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-47-->[com.google.android.gms:play-services-base:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/87368764c6779936465a2f05b68d072a/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+47-->[com.google.android.gms:play-services-base:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3b556e40c85f6b91f4d59e6243478c9e/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
 48            android:exported="false"
-48-->[com.google.android.gms:play-services-base:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/87368764c6779936465a2f05b68d072a/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+48-->[com.google.android.gms:play-services-base:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3b556e40c85f6b91f4d59e6243478c9e/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
 49            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-49-->[com.google.android.gms:play-services-base:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/87368764c6779936465a2f05b68d072a/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+49-->[com.google.android.gms:play-services-base:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/3b556e40c85f6b91f4d59e6243478c9e/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
 50
 51        <meta-data
-51-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/7fd5134f0fec84d650badc6bc902f8a8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+51-->[com.google.android.gms:play-services-basement:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/24d2fef5c0a7bd143c10656b9b62971b/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
 52            android:name="com.google.android.gms.version"
-52-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/7fd5134f0fec84d650badc6bc902f8a8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+52-->[com.google.android.gms:play-services-basement:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/24d2fef5c0a7bd143c10656b9b62971b/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
 53            android:value="@integer/google_play_services_version" />
-53-->[com.google.android.gms:play-services-basement:17.0.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/7fd5134f0fec84d650badc6bc902f8a8/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+53-->[com.google.android.gms:play-services-basement:17.5.0] /Users/sarayutp/.gradle/caches/transforms-2/files-2.1/24d2fef5c0a7bd143c10656b9b62971b/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
 54    </application>
 55
 56</manifest>

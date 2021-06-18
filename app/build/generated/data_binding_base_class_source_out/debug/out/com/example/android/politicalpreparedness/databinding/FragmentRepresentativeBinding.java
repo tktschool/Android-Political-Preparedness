@@ -4,7 +4,6 @@ package com.example.android.politicalpreparedness.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -13,8 +12,10 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.example.android.politicalpreparedness.R;
 import com.example.android.politicalpreparedness.representative.RepresentativeViewModel;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -26,19 +27,19 @@ public abstract class FragmentRepresentativeBinding extends ViewDataBinding {
   public final EditText addressLine2;
 
   @NonNull
-  public final Button buttonLocation;
+  public final MaterialButton buttonLocation;
 
   @NonNull
-  public final Button buttonSearch;
+  public final MaterialButton buttonSearch;
 
   @NonNull
   public final EditText city;
 
   @NonNull
-  public final TextView listPlaceholder;
+  public final TextView representativeTitle;
 
   @NonNull
-  public final TextView representativeTitle;
+  public final RecyclerView representativesRecyclerview;
 
   @NonNull
   public final TextView searchTitle;
@@ -53,17 +54,18 @@ public abstract class FragmentRepresentativeBinding extends ViewDataBinding {
   protected RepresentativeViewModel mViewModel;
 
   protected FragmentRepresentativeBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, EditText addressLine1, EditText addressLine2, Button buttonLocation,
-      Button buttonSearch, EditText city, TextView listPlaceholder, TextView representativeTitle,
-      TextView searchTitle, Spinner state, EditText zip) {
+      int _localFieldCount, EditText addressLine1, EditText addressLine2,
+      MaterialButton buttonLocation, MaterialButton buttonSearch, EditText city,
+      TextView representativeTitle, RecyclerView representativesRecyclerview, TextView searchTitle,
+      Spinner state, EditText zip) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addressLine1 = addressLine1;
     this.addressLine2 = addressLine2;
     this.buttonLocation = buttonLocation;
     this.buttonSearch = buttonSearch;
     this.city = city;
-    this.listPlaceholder = listPlaceholder;
     this.representativeTitle = representativeTitle;
+    this.representativesRecyclerview = representativesRecyclerview;
     this.searchTitle = searchTitle;
     this.state = state;
     this.zip = zip;

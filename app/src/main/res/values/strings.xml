@@ -11,7 +11,6 @@
     <string name="saved_elections">Saved Elections</string>
     <string name="follow_election">Follow election</string>
     <string name="unfollow_election">Unfollow election</string>
-    <string name="find_my_representatives">Find my representatives</string>
 
     <string name="profile_picture">Profile picture</string>
     <string name="twitter">Twitter</string>
@@ -20,12 +19,17 @@
 
     <!--Representative-->
     <string name="representative_search">Representative Search</string>
+    <string name="find_my_representatives">Find my representatives</string>
     <string name="my_representatives">My representatives</string>
+    <string name="use_my_location">Use my location</string>
     <string name="city">City</string>
     <string name="zip_code">ZIP Code</string>
     <string name="address_line_1">Address Line 1</string>
     <string name="address_line_2">Address Line 2</string>
 
-
+    <string name="internet_connection_error">Please check your Internet connection and try again</string>
+    <string name="location_required_error">Location services must be enabled to use the app</string>
+    <string name="permission_denied_explanation">You need to grant location permission in order to select the location.</string>
+    <string name="settings">Settings</string>
 
 </resources>

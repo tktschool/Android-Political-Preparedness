@@ -19,6 +19,7 @@ public class VoterInfoFragmentArgs implements NavArgs {
   private VoterInfoFragmentArgs() {
   }
 
+  @SuppressWarnings("unchecked")
   private VoterInfoFragmentArgs(HashMap argumentsMap) {
     this.arguments.putAll(argumentsMap);
   }
@@ -103,10 +104,12 @@ public class VoterInfoFragmentArgs implements NavArgs {
   public static class Builder {
     private final HashMap arguments = new HashMap();
 
+    @SuppressWarnings("unchecked")
     public Builder(VoterInfoFragmentArgs original) {
       this.arguments.putAll(original.arguments);
     }
 
+    @SuppressWarnings("unchecked")
     public Builder(@NonNull Election argElection) {
       if (argElection == null) {
         throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");
@@ -121,6 +124,7 @@ public class VoterInfoFragmentArgs implements NavArgs {
     }
 
     @NonNull
+    @SuppressWarnings("unchecked")
     public Builder setArgElection(@NonNull Election argElection) {
       if (argElection == null) {
         throw new IllegalArgumentException("Argument \"arg_election\" is marked as non-null but was passed a null value.");

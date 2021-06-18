@@ -60,12 +60,8 @@ class ElectionRepository(private val database: ElectionDatabase) {
 
     suspend fun refreshRepresentatives(address: String) {
         withContext(Dispatchers.IO) {
-            try {
                 val (offices, officials) = CivicsApi.retrofitService.getRepresentatives(address)
                 _representatives.postValue(offices.flatMap { office -> office.getRepresentatives(officials) })
-            } catch (e: Exception) {
-                e.message?.let { Log.e("ElectionRepository refreshRepresentatives", e.message!!) }
-            }
         }
     }
 
