@@ -10,6 +10,8 @@ import com.example.android.politicalpreparedness.R
 import com.example.android.politicalpreparedness.databinding.FragmentLaunchBinding
 import com.example.android.politicalpreparedness.election.adapter.ElectionListAdapter
 import com.example.android.politicalpreparedness.election.adapter.ElectionListener
+import com.example.android.politicalpreparedness.utils.setDisplayHomeAsUpEnabled
+import com.example.android.politicalpreparedness.utils.setTitle
 
 class LaunchFragment : Fragment() {
 
@@ -21,6 +23,10 @@ class LaunchFragment : Fragment() {
 
         binding.upcomingButton.setOnClickListener { navToElections() }
         binding.representativesButton.setOnClickListener { navToRepresentatives() }
+
+        setHasOptionsMenu(false)
+        setDisplayHomeAsUpEnabled(true)
+        setTitle(getString(R.string.app_name))
 
         return binding.root
     }

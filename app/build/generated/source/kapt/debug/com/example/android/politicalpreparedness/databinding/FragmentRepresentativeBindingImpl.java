@@ -14,11 +14,11 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.search_title, 6);
-        sViewsWithIds.put(R.id.button_search, 7);
-        sViewsWithIds.put(R.id.button_location, 8);
-        sViewsWithIds.put(R.id.representative_title, 9);
-        sViewsWithIds.put(R.id.representatives_recyclerview, 10);
+        sViewsWithIds.put(R.id.representatives_search_constraint_layout, 10);
+        sViewsWithIds.put(R.id.search_title, 11);
+        sViewsWithIds.put(R.id.my_representatives_constraint_layout, 12);
+        sViewsWithIds.put(R.id.representative_title, 13);
+        sViewsWithIds.put(R.id.representatives_recyclerview, 14);
     }
     // views
     @NonNull
@@ -221,24 +221,32 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     };
 
     public FragmentRepresentativeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentRepresentativeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 2
             , (android.widget.EditText) bindings[1]
             , (android.widget.EditText) bindings[2]
-            , (com.google.android.material.button.MaterialButton) bindings[8]
             , (com.google.android.material.button.MaterialButton) bindings[7]
+            , (com.google.android.material.button.MaterialButton) bindings[6]
             , (android.widget.EditText) bindings[3]
-            , (android.widget.TextView) bindings[9]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
-            , (android.widget.TextView) bindings[6]
+            , (android.widget.ImageView) bindings[9]
+            , (android.widget.TextView) bindings[8]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[12]
+            , (android.widget.TextView) bindings[13]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[14]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[10]
+            , (android.widget.TextView) bindings[11]
             , (android.widget.Spinner) bindings[4]
             , (android.widget.EditText) bindings[5]
             );
         this.addressLine1.setTag(null);
         this.addressLine2.setTag(null);
+        this.buttonLocation.setTag(null);
+        this.buttonSearch.setTag(null);
         this.city.setTag(null);
+        this.connectionErrorImage.setTag(null);
+        this.internetConnectionErrorTextview.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.motion.widget.MotionLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.state.setTag(null);
@@ -251,7 +259,7 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -281,7 +289,7 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     public void setViewModel(@Nullable com.example.android.politicalpreparedness.representative.RepresentativeViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -291,14 +299,25 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewModelIsNetworkAvailable((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
+            case 1 :
                 return onChangeViewModelAddress((androidx.lifecycle.LiveData<com.example.android.politicalpreparedness.network.models.Address>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeViewModelIsNetworkAvailable(androidx.lifecycle.LiveData<java.lang.Boolean> ViewModelIsNetworkAvailable, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
     private boolean onChangeViewModelAddress(androidx.lifecycle.LiveData<com.example.android.politicalpreparedness.network.models.Address> ViewModelAddress, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
-                    mDirtyFlags |= 0x1L;
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -314,45 +333,78 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
         }
         com.example.android.politicalpreparedness.network.models.Address viewModelAddressGetValue = null;
         java.lang.String viewModelAddressZip = null;
+        java.lang.Boolean viewModelIsNetworkAvailableGetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailable = false;
+        androidx.lifecycle.LiveData<java.lang.Boolean> viewModelIsNetworkAvailable = null;
+        boolean ViewModelIsNetworkAvailable1 = false;
         java.lang.String viewModelAddressCity = null;
         java.lang.String viewModelAddressLine2 = null;
         java.lang.String viewModelAddressLine1 = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailableGetValue = false;
         androidx.lifecycle.LiveData<com.example.android.politicalpreparedness.network.models.Address> viewModelAddress = null;
         java.lang.String viewModelAddressState = null;
         com.example.android.politicalpreparedness.representative.RepresentativeViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xdL) != 0) {
 
-                if (viewModel != null) {
-                    // read viewModel.address
-                    viewModelAddress = viewModel.getAddress();
-                }
-                updateLiveDataRegistration(0, viewModelAddress);
-
-
-                if (viewModelAddress != null) {
-                    // read viewModel.address.getValue()
-                    viewModelAddressGetValue = viewModelAddress.getValue();
-                }
+                    if (viewModel != null) {
+                        // read viewModel.isNetworkAvailable
+                        viewModelIsNetworkAvailable = viewModel.isNetworkAvailable();
+                    }
+                    updateLiveDataRegistration(0, viewModelIsNetworkAvailable);
 
 
-                if (viewModelAddressGetValue != null) {
-                    // read viewModel.address.getValue().zip
-                    viewModelAddressZip = viewModelAddressGetValue.getZip();
-                    // read viewModel.address.getValue().city
-                    viewModelAddressCity = viewModelAddressGetValue.getCity();
-                    // read viewModel.address.getValue().line2
-                    viewModelAddressLine2 = viewModelAddressGetValue.getLine2();
-                    // read viewModel.address.getValue().line1
-                    viewModelAddressLine1 = viewModelAddressGetValue.getLine1();
-                    // read viewModel.address.getValue().state
-                    viewModelAddressState = viewModelAddressGetValue.getState();
-                }
+                    if (viewModelIsNetworkAvailable != null) {
+                        // read viewModel.isNetworkAvailable.getValue()
+                        viewModelIsNetworkAvailableGetValue = viewModelIsNetworkAvailable.getValue();
+                    }
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.isNetworkAvailable.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailableGetValue = androidx.databinding.ViewDataBinding.safeUnbox(viewModelIsNetworkAvailableGetValue);
+
+
+                    // read !androidx.databinding.ViewDataBinding.safeUnbox(viewModel.isNetworkAvailable.getValue())
+                    ViewModelIsNetworkAvailable1 = !androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailableGetValue;
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(!androidx.databinding.ViewDataBinding.safeUnbox(viewModel.isNetworkAvailable.getValue()))
+                    androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailable = androidx.databinding.ViewDataBinding.safeUnbox(ViewModelIsNetworkAvailable1);
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.address
+                        viewModelAddress = viewModel.getAddress();
+                    }
+                    updateLiveDataRegistration(1, viewModelAddress);
+
+
+                    if (viewModelAddress != null) {
+                        // read viewModel.address.getValue()
+                        viewModelAddressGetValue = viewModelAddress.getValue();
+                    }
+
+
+                    if (viewModelAddressGetValue != null) {
+                        // read viewModel.address.getValue().zip
+                        viewModelAddressZip = viewModelAddressGetValue.getZip();
+                        // read viewModel.address.getValue().city
+                        viewModelAddressCity = viewModelAddressGetValue.getCity();
+                        // read viewModel.address.getValue().line2
+                        viewModelAddressLine2 = viewModelAddressGetValue.getLine2();
+                        // read viewModel.address.getValue().line1
+                        viewModelAddressLine1 = viewModelAddressGetValue.getLine1();
+                        // read viewModel.address.getValue().state
+                        viewModelAddressState = viewModelAddressGetValue.getState();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.addressLine1, viewModelAddressLine1);
@@ -361,7 +413,7 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
             com.example.android.politicalpreparedness.representative.adapter.RepresentativeBindingAdaptersKt.setNewValue(this.state, viewModelAddressState);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.zip, viewModelAddressZip);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.addressLine1, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, addressLine1androidTextAttrChanged);
@@ -369,15 +421,24 @@ public class FragmentRepresentativeBindingImpl extends FragmentRepresentativeBin
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.city, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, cityandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.zip, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, zipandroidTextAttrChanged);
         }
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            com.example.android.politicalpreparedness.utils.BindingUtilsKt.setVisibility(this.buttonLocation, androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailableGetValue);
+            com.example.android.politicalpreparedness.utils.BindingUtilsKt.setVisibility(this.buttonSearch, androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailableGetValue);
+            com.example.android.politicalpreparedness.utils.BindingUtilsKt.setVisibility(this.connectionErrorImage, androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailable);
+            com.example.android.politicalpreparedness.utils.BindingUtilsKt.setVisibility(this.internetConnectionErrorTextview, androidxDatabindingViewDataBindingSafeUnboxViewModelIsNetworkAvailable);
+        }
     }
     // Listener Stub Implementations
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel.address
-        flag 1 (0x2L): viewModel
-        flag 2 (0x3L): null
+        flag 0 (0x1L): viewModel.isNetworkAvailable
+        flag 1 (0x2L): viewModel.address
+        flag 2 (0x3L): viewModel
+        flag 3 (0x4L): null
     flag mapping end*/
     //end
 }

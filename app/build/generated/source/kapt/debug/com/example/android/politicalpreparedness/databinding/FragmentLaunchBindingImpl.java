@@ -14,8 +14,9 @@ public class FragmentLaunchBindingImpl extends FragmentLaunchBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.upcoming_button, 1);
-        sViewsWithIds.put(R.id.representatives_button, 2);
+        sViewsWithIds.put(R.id.imageView, 1);
+        sViewsWithIds.put(R.id.upcoming_button, 2);
+        sViewsWithIds.put(R.id.representatives_button, 3);
     }
     // views
     @NonNull
@@ -26,12 +27,13 @@ public class FragmentLaunchBindingImpl extends FragmentLaunchBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentLaunchBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentLaunchBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.ImageView) bindings[1]
+            , (com.google.android.material.button.MaterialButton) bindings[3]
             , (com.google.android.material.button.MaterialButton) bindings[2]
-            , (com.google.android.material.button.MaterialButton) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

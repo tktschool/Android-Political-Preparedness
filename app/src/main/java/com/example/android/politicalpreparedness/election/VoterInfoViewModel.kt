@@ -7,6 +7,7 @@ import com.example.android.politicalpreparedness.database.ElectionDao
 import com.example.android.politicalpreparedness.network.models.Election
 import com.example.android.politicalpreparedness.repository.ElectionRepository
 import com.example.android.politicalpreparedness.utils.SingleLiveEvent
+import com.example.android.politicalpreparedness.utils.isNetworkAvailable
 import kotlinx.coroutines.launch
 import java.io.IOException
 
@@ -22,13 +23,9 @@ class VoterInfoViewModel(
     //Add var and methods to populate voter info
     val voterInfo = repository.voterInfo
 
-    private val _voterInfoFetched = MutableLiveData<Boolean>(false)
-    val voterInfoFetched: LiveData<Boolean>
-        get() = _voterInfoFetched
-
-    private val _errorOnFetchingNetwork = MutableLiveData<Boolean>(false)
-    val errorOnFetchingNetwork: LiveData<Boolean>
-        get() = _errorOnFetchingNetwork
+    private val _isNetworkAvailable = MutableLiveData<Boolean>(false)
+    val isNetworkAvailable: LiveData<Boolean>
+        get() = _isNetworkAvailable
 
     private val _showVotingLocations = MutableLiveData<Boolean>(false)
     val showVotingLocations: LiveData<Boolean>
@@ -96,19 +93,21 @@ class VoterInfoViewModel(
 
     init {
         viewModelScope.launch {
-            getVoterInfo()
+            if (isNetworkAvailable(app)) {
+                _isNetworkAvailable.value = true
+                getVoterInfo()
+            } else {
+                _isNetworkAvailable.value = false
+            }
             initFollowButton()
         }
     }
 
     private suspend fun getVoterInfo() {
         try {
-            _voterInfoFetched.value = false
             repository.refreshVoterInfo(election.division.state, election.id)
-            _errorOnFetchingNetwork.value = false
-            _voterInfoFetched.value = true
         } catch (networkError: IOException) {
-            _errorOnFetchingNetwork.value = true
+            showErrorMessage.value = networkError.message
         }
     }
 

@@ -1992,6 +1992,7 @@ id clockwise
 id closest
 id collapseActionView
 id confirm_button
+id connection_error_image
 id constraint
 id container
 id content
@@ -2089,9 +2090,11 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id info
+id internet_connection_error_textview
 id invisible
 id inward
 id italic
@@ -2168,6 +2171,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id my_representatives_constraint_layout
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment
@@ -2217,6 +2221,7 @@ id representative_photo
 id representative_title
 id representatives_button
 id representatives_recyclerview
+id representatives_search_constraint_layout
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2561,6 +2566,7 @@ string appbar_scrolling_view_behavior
 string ballot_information
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string can_not_find_location
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2585,6 +2591,8 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string correspondence_address
+string correspondence_address_detail
 string election_information
 string error_icon_content_description
 string exposed_dropdown_menu_content_description

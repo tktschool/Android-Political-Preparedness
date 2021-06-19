@@ -32,6 +32,8 @@ import com.example.android.politicalpreparedness.election.ElectionsViewModelFact
 import com.example.android.politicalpreparedness.network.models.Address
 import com.example.android.politicalpreparedness.repository.ElectionRepository
 import com.example.android.politicalpreparedness.representative.adapter.RepresentativeListAdapter
+import com.example.android.politicalpreparedness.utils.setDisplayHomeAsUpEnabled
+import com.example.android.politicalpreparedness.utils.setTitle
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationRequest
@@ -78,6 +80,9 @@ class DetailFragment : BaseFragment() {
         binding = FragmentRepresentativeBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
         binding.viewModel = _viewModel
+        setHasOptionsMenu(false)
+        setDisplayHomeAsUpEnabled(true)
+        setTitle(getString(R.string.app_name))
 
         //Populate Representative adapter
         val representativeListAdapter = RepresentativeListAdapter()
@@ -310,7 +315,7 @@ class DetailFragment : BaseFragment() {
                     _viewModel.showErrorMessage.value =
                         getString(R.string.internet_connection_error)
                 } catch (ex: Exception) {
-                    _viewModel.showErrorMessage.value = ex.toString()
+                    _viewModel.showErrorMessage.value = getString(R.string.can_not_find_location)
                 }
             }
         }

@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -36,10 +38,22 @@ public abstract class FragmentRepresentativeBinding extends ViewDataBinding {
   public final EditText city;
 
   @NonNull
+  public final ImageView connectionErrorImage;
+
+  @NonNull
+  public final TextView internetConnectionErrorTextview;
+
+  @NonNull
+  public final ConstraintLayout myRepresentativesConstraintLayout;
+
+  @NonNull
   public final TextView representativeTitle;
 
   @NonNull
   public final RecyclerView representativesRecyclerview;
+
+  @NonNull
+  public final ConstraintLayout representativesSearchConstraintLayout;
 
   @NonNull
   public final TextView searchTitle;
@@ -56,16 +70,23 @@ public abstract class FragmentRepresentativeBinding extends ViewDataBinding {
   protected FragmentRepresentativeBinding(Object _bindingComponent, View _root,
       int _localFieldCount, EditText addressLine1, EditText addressLine2,
       MaterialButton buttonLocation, MaterialButton buttonSearch, EditText city,
-      TextView representativeTitle, RecyclerView representativesRecyclerview, TextView searchTitle,
-      Spinner state, EditText zip) {
+      ImageView connectionErrorImage, TextView internetConnectionErrorTextview,
+      ConstraintLayout myRepresentativesConstraintLayout, TextView representativeTitle,
+      RecyclerView representativesRecyclerview,
+      ConstraintLayout representativesSearchConstraintLayout, TextView searchTitle, Spinner state,
+      EditText zip) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addressLine1 = addressLine1;
     this.addressLine2 = addressLine2;
     this.buttonLocation = buttonLocation;
     this.buttonSearch = buttonSearch;
     this.city = city;
+    this.connectionErrorImage = connectionErrorImage;
+    this.internetConnectionErrorTextview = internetConnectionErrorTextview;
+    this.myRepresentativesConstraintLayout = myRepresentativesConstraintLayout;
     this.representativeTitle = representativeTitle;
     this.representativesRecyclerview = representativesRecyclerview;
+    this.representativesSearchConstraintLayout = representativesSearchConstraintLayout;
     this.searchTitle = searchTitle;
     this.state = state;
     this.zip = zip;

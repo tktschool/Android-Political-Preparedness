@@ -44,6 +44,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/up_coming_recycler_view" />
 
+        <ImageView
+            android:id="@+id/connection_error_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginTop="@dimen/large_padding"
+            android:layout_marginEnd="@dimen/large_padding"
+            android:layout_marginBottom="@dimen/large_padding"
+            android:contentDescription="@string/internet_connection_error"
+            android:src="@drawable/ic_connection_error"
+            app:layout_constraintBottom_toTopOf="@+id/save_elections_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upcoming_elections_textview"
+            app:setVisibilityBinding="@{!electionViewModel.isNetworkAvailable}" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/up_coming_recycler_view"
             android:layout_width="0dp"

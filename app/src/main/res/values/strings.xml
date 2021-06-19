@@ -31,6 +31,7 @@
 
     <string name="internet_connection_error">Please check your Internet connection and try again</string>
     <string name="location_required_error">Location services must be enabled to use the app</string>
+    <string name="can_not_find_location">Can\'t find you location, please try again</string>
     <string name="permission_denied_explanation">You need to grant location permission in order to select the location.</string>
     <string name="settings">Settings</string>
 

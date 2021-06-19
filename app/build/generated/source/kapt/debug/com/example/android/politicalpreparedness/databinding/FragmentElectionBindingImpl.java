@@ -14,10 +14,10 @@ public class FragmentElectionBindingImpl extends FragmentElectionBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.upcoming_elections_textview, 1);
-        sViewsWithIds.put(R.id.save_elections_textview, 2);
-        sViewsWithIds.put(R.id.up_coming_recycler_view, 3);
-        sViewsWithIds.put(R.id.save_election_recycler_view, 4);
+        sViewsWithIds.put(R.id.upcoming_elections_textview, 2);
+        sViewsWithIds.put(R.id.save_elections_textview, 3);
+        sViewsWithIds.put(R.id.up_coming_recycler_view, 4);
+        sViewsWithIds.put(R.id.save_election_recycler_view, 5);
     }
     // views
     @NonNull
@@ -28,15 +28,17 @@ public class FragmentElectionBindingImpl extends FragmentElectionBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentElectionBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentElectionBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 0
+        super(bindingComponent, root, 1
+            , (android.widget.ImageView) bindings[1]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[5]
+            , (android.widget.TextView) bindings[3]
             , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             , (android.widget.TextView) bindings[2]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
-            , (android.widget.TextView) bindings[1]
             );
+        this.connectionErrorImage.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
@@ -47,7 +49,7 @@ public class FragmentElectionBindingImpl extends FragmentElectionBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -76,11 +78,27 @@ public class FragmentElectionBindingImpl extends FragmentElectionBinding  {
 
     public void setElectionViewModel(@Nullable com.example.android.politicalpreparedness.election.ElectionsViewModel ElectionViewModel) {
         this.mElectionViewModel = ElectionViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x2L;
+        }
+        notifyPropertyChanged(BR.electionViewModel);
+        super.requestRebind();
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
+            case 0 :
+                return onChangeElectionViewModelIsNetworkAvailable((androidx.lifecycle.LiveData<java.lang.Boolean>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeElectionViewModelIsNetworkAvailable(androidx.lifecycle.LiveData<java.lang.Boolean> ElectionViewModelIsNetworkAvailable, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
@@ -92,15 +110,56 @@ public class FragmentElectionBindingImpl extends FragmentElectionBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean androidxDatabindingViewDataBindingSafeUnboxElectionViewModelIsNetworkAvailable = false;
+        boolean electionViewModelIsNetworkAvailable = false;
+        androidx.lifecycle.LiveData<java.lang.Boolean> ElectionViewModelIsNetworkAvailable1 = null;
+        com.example.android.politicalpreparedness.election.ElectionsViewModel electionViewModel = mElectionViewModel;
+        java.lang.Boolean electionViewModelIsNetworkAvailableGetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxElectionViewModelIsNetworkAvailableGetValue = false;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (electionViewModel != null) {
+                    // read electionViewModel.isNetworkAvailable
+                    ElectionViewModelIsNetworkAvailable1 = electionViewModel.isNetworkAvailable();
+                }
+                updateLiveDataRegistration(0, ElectionViewModelIsNetworkAvailable1);
+
+
+                if (ElectionViewModelIsNetworkAvailable1 != null) {
+                    // read electionViewModel.isNetworkAvailable.getValue()
+                    electionViewModelIsNetworkAvailableGetValue = ElectionViewModelIsNetworkAvailable1.getValue();
+                }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(electionViewModel.isNetworkAvailable.getValue())
+                androidxDatabindingViewDataBindingSafeUnboxElectionViewModelIsNetworkAvailableGetValue = androidx.databinding.ViewDataBinding.safeUnbox(electionViewModelIsNetworkAvailableGetValue);
+
+
+                // read !androidx.databinding.ViewDataBinding.safeUnbox(electionViewModel.isNetworkAvailable.getValue())
+                electionViewModelIsNetworkAvailable = !androidxDatabindingViewDataBindingSafeUnboxElectionViewModelIsNetworkAvailableGetValue;
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(!androidx.databinding.ViewDataBinding.safeUnbox(electionViewModel.isNetworkAvailable.getValue()))
+                androidxDatabindingViewDataBindingSafeUnboxElectionViewModelIsNetworkAvailable = androidx.databinding.ViewDataBinding.safeUnbox(electionViewModelIsNetworkAvailable);
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            com.example.android.politicalpreparedness.utils.BindingUtilsKt.setVisibility(this.connectionErrorImage, androidxDatabindingViewDataBindingSafeUnboxElectionViewModelIsNetworkAvailable);
+        }
     }
     // Listener Stub Implementations
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): electionViewModel
-        flag 1 (0x2L): null
+        flag 0 (0x1L): electionViewModel.isNetworkAvailable
+        flag 1 (0x2L): electionViewModel
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

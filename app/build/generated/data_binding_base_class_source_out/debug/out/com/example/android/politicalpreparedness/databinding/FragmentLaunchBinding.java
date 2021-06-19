@@ -4,6 +4,7 @@ package com.example.android.politicalpreparedness.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
@@ -15,14 +16,18 @@ import java.lang.Object;
 
 public abstract class FragmentLaunchBinding extends ViewDataBinding {
   @NonNull
+  public final ImageView imageView;
+
+  @NonNull
   public final MaterialButton representativesButton;
 
   @NonNull
   public final MaterialButton upcomingButton;
 
   protected FragmentLaunchBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialButton representativesButton, MaterialButton upcomingButton) {
+      ImageView imageView, MaterialButton representativesButton, MaterialButton upcomingButton) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.imageView = imageView;
     this.representativesButton = representativesButton;
     this.upcomingButton = upcomingButton;
   }
