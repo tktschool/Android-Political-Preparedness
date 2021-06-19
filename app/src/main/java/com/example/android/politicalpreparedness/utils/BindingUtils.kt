@@ -1,6 +1,7 @@
 package com.example.android.politicalpreparedness.utils
 
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
@@ -27,5 +28,10 @@ fun setVisibility(view: View, isVisible: Boolean) {
 
 @BindingAdapter("viewVisibility")
 fun TextView.bindVisible(status: String?) {
+    visibility = if (status.isNullOrEmpty()) View.GONE else View.VISIBLE
+}
+
+@BindingAdapter("buttonVisibility")
+fun Button.bindVisible(status: String?) {
     visibility = if (status.isNullOrEmpty()) View.GONE else View.VISIBLE
 }

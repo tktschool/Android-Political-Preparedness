@@ -4,6 +4,7 @@ package com.example.android.politicalpreparedness.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,9 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentElectionBinding extends ViewDataBinding {
+  @NonNull
+  public final ImageView connectionErrorImage;
+
   @NonNull
   public final RecyclerView saveElectionRecyclerView;
 
@@ -33,9 +37,11 @@ public abstract class FragmentElectionBinding extends ViewDataBinding {
   protected ElectionsViewModel mElectionViewModel;
 
   protected FragmentElectionBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView saveElectionRecyclerView, TextView saveElectionsTextview,
-      RecyclerView upComingRecyclerView, TextView upcomingElectionsTextview) {
+      ImageView connectionErrorImage, RecyclerView saveElectionRecyclerView,
+      TextView saveElectionsTextview, RecyclerView upComingRecyclerView,
+      TextView upcomingElectionsTextview) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.connectionErrorImage = connectionErrorImage;
     this.saveElectionRecyclerView = saveElectionRecyclerView;
     this.saveElectionsTextview = saveElectionsTextview;
     this.upComingRecyclerView = upComingRecyclerView;

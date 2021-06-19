@@ -361,6 +361,7 @@ public class FragmentVoterInfoBindingImpl extends FragmentVoterInfoBinding imple
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.followButton, voterInfoViewModelFollowButtonStateGetValue);
+            com.example.android.politicalpreparedness.utils.BindingUtilsKt.bindVisible(this.followButton, voterInfoViewModelFollowButtonStateGetValue);
         }
         if ((dirtyFlags & 0x144L) != 0) {
             // api target 1

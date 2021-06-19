@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +26,9 @@ public abstract class FragmentVoterInfoBinding extends ViewDataBinding {
 
   @NonNull
   public final Group addressGroup;
+
+  @NonNull
+  public final ImageView connectionErrorImage;
 
   @NonNull
   public final TextView electionDate;
@@ -54,12 +58,13 @@ public abstract class FragmentVoterInfoBinding extends ViewDataBinding {
   protected VoterInfoViewModel mVoterInfoViewModel;
 
   protected FragmentVoterInfoBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView address, Group addressGroup, TextView electionDate, Toolbar electionName,
-      Button followButton, TextView stateBallot, TextView stateCorrespondenceHeader,
-      TextView stateHeader, TextView stateLocations) {
+      TextView address, Group addressGroup, ImageView connectionErrorImage, TextView electionDate,
+      Toolbar electionName, Button followButton, TextView stateBallot,
+      TextView stateCorrespondenceHeader, TextView stateHeader, TextView stateLocations) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
     this.addressGroup = addressGroup;
+    this.connectionErrorImage = connectionErrorImage;
     this.electionDate = electionDate;
     this.electionName = electionName;
     this.followButton = followButton;
