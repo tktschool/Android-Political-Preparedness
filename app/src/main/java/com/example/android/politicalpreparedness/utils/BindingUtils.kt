@@ -20,6 +20,11 @@ fun Date.toFormatDateString(): String {
     return format.format(this)
 }
 
+@BindingAdapter("setVisibilityBinding")
+fun setVisibility(view: View, isVisible: Boolean) {
+    view.visibility = if (isVisible) View.VISIBLE else View.GONE
+}
+
 @BindingAdapter("viewVisibility")
 fun TextView.bindVisible(status: String?) {
     visibility = if (status.isNullOrEmpty()) View.GONE else View.VISIBLE

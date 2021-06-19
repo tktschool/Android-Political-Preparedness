@@ -51,15 +51,15 @@ class VoterInfoViewModel(
         _showBallotInformation.value = true
     }
 
-    //TODO: Add var and methods to save and remove elections to local database
+    //Add var and methods to save and remove elections to local database
     fun onFollowButtonClicked() {
         viewModelScope.launch {
             if (repository.hasElection(election)) {
                 repository.unfollowElection(election)
-                _followButtonState.value = unfollowString
+                _followButtonState.value = followString
             } else {
                 repository.followElection(election)
-                _followButtonState.value = followString
+                _followButtonState.value = unfollowString
             }
         }
     }
@@ -67,18 +67,12 @@ class VoterInfoViewModel(
     private suspend fun initFollowButton() {
         viewModelScope.launch {
             if (repository.hasElection(election)) {
-                _followButtonState.value = followString
-            } else {
                 _followButtonState.value = unfollowString
+            } else {
+                _followButtonState.value = followString
             }
         }
     }
-
-    //TODO: cont'd -- Populate initial state of save button to reflect proper action based on election saved status
-
-    /**
-     * Hint: The saved state can be accomplished in multiple ways. It is directly related to how elections are saved/removed from the database.
-     */
 
     val hasElectionInfo = Transformations.map(voterInfo) { voterInfo ->
         voterInfo.state?.first()?.electionAdministrationBody?.electionInfoUrl
@@ -93,7 +87,7 @@ class VoterInfoViewModel(
     }
 
     val hasCorrespondenceInformation = Transformations.map(voterInfo) { voterInfo ->
-        voterInfo.state?.first()?.electionAdministrationBody?.correspondenceAddress
+        voterInfo.state?.first()?.electionAdministrationBody?.correspondenceAddress != null
     }
 
     val correspondenceAddress = Transformations.map(voterInfo) { voterInfo ->

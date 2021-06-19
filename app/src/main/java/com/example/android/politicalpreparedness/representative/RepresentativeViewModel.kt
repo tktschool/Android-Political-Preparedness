@@ -15,7 +15,7 @@ class RepresentativeViewModel(
     application: Application
 ) : BaseViewModel(application) {
 
-    //TODO: Establish live data for representatives and address
+    //Establish live data for representatives and address
     private val _address = MutableLiveData<Address>(Address("", "", "", "", ""))
     val address: LiveData<Address>
         get() = _address

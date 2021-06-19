@@ -51,9 +51,9 @@ class ElectionsFragment : BaseFragment() {
         setHasOptionsMenu(false)
         setDisplayHomeAsUpEnabled(true)
         setTitle(getString(R.string.app_name))
-        //TODO: Link elections to voter info
-
-        //TODO: Initiate recycler adapters
+        //Link elections to voter info
+        //initiate recycler adapters
+        //Populate recycler adapters
         val adapter = ElectionListAdapter(ElectionListener { election ->
             _viewModel.navigationCommand.postValue(
                 NavigationCommand.To(
@@ -84,10 +84,6 @@ class ElectionsFragment : BaseFragment() {
                 adapter2.submitList(it)
             }
         }
-
-
-
-        //TODO: Populate recycler adapters
 
         return binding.root
     }
