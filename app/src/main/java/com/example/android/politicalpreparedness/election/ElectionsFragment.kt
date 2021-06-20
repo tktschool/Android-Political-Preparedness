@@ -51,6 +51,7 @@ class ElectionsFragment : BaseFragment() {
         setHasOptionsMenu(false)
         setDisplayHomeAsUpEnabled(true)
         setTitle(getString(R.string.app_name))
+
         //Link elections to voter info
         //initiate recycler adapters
         //Populate recycler adapters
