@@ -74,12 +74,14 @@ class ElectionsFragment : BaseFragment() {
         binding.upComingRecyclerView.adapter = adapter
         binding.saveElectionRecyclerView.adapter = adapter2
 
+        //Observer upcomingElection , submitList to adapter when ot change
         _viewModel.upcomingElection.observe(viewLifecycleOwner) {
             it.let {
                 adapter.submitList(it)
             }
         }
 
+        //Observer savedElections, submitList to adapter when ot change
         _viewModel.savedElections.observe(viewLifecycleOwner) {
             it.let {
                 adapter2.submitList(it)
